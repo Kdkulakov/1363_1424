@@ -970,32 +970,6 @@ td:first-child {
 	text-align: center;
 }
 
-.red-button {
-	display: block;
-	height: 71px;
-	width: 510px;
-	border-radius: 35px;
-	background-color: #f44336;
-	text-align: center;
-	text-transform: uppercase;
-	text-decoration: none;
-	color:  #ffffff;
-	font-size: 22px;
-	font-weight: 700;
-	line-height: 24px;
-	box-shadow: 0px 2px 4.85px 0.15px rgba(33, 33, 33, 0.35);
-	line-height: 70px;
-	letter-spacing: 6px;
-	margin-top: 31px;
-}
-.red-button:hover {
-	box-shadow: none;
-}
-.red-button:active {
-	box-shadow: none;
-	background-color: #d41306;
-}
-
 .description-text {
 	margin-top: 50px;
 	color:  #212121;
