@@ -17,5 +17,13 @@
           <a href="{% url 'auth:login' %}">войти</a>
         {% endif %}
     </li>
+    <li>
+        <a href="{% url 'basket:index' %}" class="basket">
+            <span>
+                {% if basket %} {{ basket|length }} {% endif %}
+            </span>
+        </a>
+
+    </li>
 </ul>
 <a href="#" class="search"></a>
