@@ -1,0 +1,19 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="user_delete">
+    Уверены, что хотите удалить {{ product_to_delete.name }}
+
+    ?
+    <form action="{% url 'admin_staff:category_delete' product_to_delete.pk %}" method="post">
+      {% csrf_token %}
+      <input class="btn btn-danger" type="submit" value="удалить">
+    </form>
+    <button class="btn btn-success">
+      <a href="{% url 'admin_staff:categories' %}">
+        Отмена
+      </a>
+    </button>
+  </div>
+{% endblock %}
