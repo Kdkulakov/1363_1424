@@ -7,12 +7,6 @@ from mainapp.models import ProductCategory, Product
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
-def get_basket(user):
-    if user.is_authenticated:
-        return Basket.objects.filter(user=user)
-    else:
-        return []
-
 
 def get_hot_product():
     products = Product.objects.all()
@@ -29,7 +23,6 @@ def get_same_products(hot_product):
 def products(request, pk=None, page=1):
     title = 'каталог'
     links_menu = ProductCategory.objects.all()
-    basket = get_basket(request.user)
     hot_product = get_hot_product()
     same_products = get_same_products(hot_product)
     products = Product.objects.all().order_by('price')
@@ -56,7 +49,6 @@ def products(request, pk=None, page=1):
             'links_menu': links_menu,
             'products': products_paginator,
             'category': category,
-            'basket': basket,
             'hot_product': hot_product,
             'same_products': same_products,
         }
@@ -68,7 +60,6 @@ def products(request, pk=None, page=1):
         'products': products,
         'hot_product': hot_product,
         'same_products': same_products,
-        'basket': basket,
     }
     return render(request, 'mainapp/products.html', context=context)
 
@@ -80,7 +71,6 @@ def product(request, pk):
         'title': title,
         'links_menu': ProductCategory.objects.all(),
         'product': get_object_or_404(Product, pk=pk),
-        'basket': get_basket(request.user),
     }
 
     return render(request, 'mainapp/product_detail.html', content)
