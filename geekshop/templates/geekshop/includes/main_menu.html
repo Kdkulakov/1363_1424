@@ -4,24 +4,37 @@
     <li><a href="{% url 'products:index' %}">продукты</a></li>
     <li><a href="{% url 'contacts' %}">контакты</a></li>
     {% if user.is_authenticated %}
-        <li>
+        <li class="dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             <a href="{% url 'auth:edit' %}">
                 {{ user.first_name|default:'Пользователь' }}
             </a>
         </li>
-        {% if user.is_superuser %}
-            <li>
-                <a href="{% url 'admin_staff:users' %}">
-                    админка
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li class="dropdown-item">
+                <a href="{% url 'auth:edit' %}">
+                    Настройки
                 </a>
             </li>
-        {% endif %}
+            <li class="dropdown-item">
+                <a href="{% url 'ordersapp:orders_list' %}">
+                    Заказы
+                </a>
+            </li>
+            {% if user.is_superuser %}
+                <li class="dropdown-item">
+                    <a href="{% url 'admin_staff:users' %}">
+                        админка
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+
     {% endif %}
     <li>
         {% if user.is_authenticated %}
-          <a href="{% url 'auth:logout' %}">выйти</a>
+            <a href="{% url 'auth:logout' %}">выйти</a>
         {% else %}
-          <a href="{% url 'auth:login' %}">войти</a>
+            <a href="{% url 'auth:login' %}">войти</a>
         {% endif %}
     </li>
     {% if basket %}
