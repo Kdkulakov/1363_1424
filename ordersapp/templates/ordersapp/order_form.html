@@ -2,7 +2,8 @@
 {% load static %}
 
 {% block js %}
-    <script src="{% static 'ordersapp/js/orders_scripts.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="{% static 'ordersapp/js/script.js' %}"></script>
     <script src="{% static 'ordersapp/js/jquery.formset.js' %}"></script>
 {% endblock %}
 
@@ -31,7 +32,7 @@
                        {% for form in orderitems.forms %}
                            {% if forloop.first %}
                                <thead>
-                               <tr class="formset_row">
+                               <tr >
                                    {% for field in form.visible_fields %}
                                        <th class="{% cycle 'td1' 'td2' 'td3' %} order formset_td">
                                            {{ field.label|capfirst }}
