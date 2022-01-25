@@ -1,26 +1,72 @@
-
-.red-button {
-	display: block;
-	height: 71px;
-	width: 510px;
-	border-radius: 35px;
-	background-color: #f44336;
-	text-align: center;
+.red {
 	text-transform: uppercase;
-	text-decoration: none;
-	color:  #ffffff;
-	font-size: 22px;
+	color: #e53935;
+	font-size: 18px;
 	font-weight: 700;
-	line-height: 24px;
-	box-shadow: 0px 2px 4.85px 0.15px rgba(33, 33, 33, 0.35);
-	line-height: 70px;
-	letter-spacing: 6px;
-	margin-top: 31px;
+	text-align: left;
+	letter-spacing: 1px;
+	line-height: 17px;
+	margin-bottom: 22px;
 }
-.red-button:hover {
-	box-shadow: none;
+
+.related-products, .category-products {
+	display: inline-block;
 }
-.red-button:active {
-	box-shadow: none;
-	background-color: #d41306;
+
+.products .block a img {
+	float: left;
+}
+.products .block {
+	float: left;
+	margin: 15px;
+	display: block;
+	height: 370px;
+	width: 370px;
+	position: relative;
+}
+
+.details-products {
+	padding-left: 98px;
+	padding-right: 98px;
+	margin-top: 98px;
+	height: 651px;
+}
+.details-slider {
+	width: 470px;
+	float: left;
+	margin-right: 30px;
+}
+.slider-product {
+	width: 570px;
+	height: 570px;
+}
+.slider-control {
+	width: 420px;
+	height: 70px;
+	padding-left: 100px
+}
+.slider-control .block {
+	height: 70px;
+	width: 70px;
+	position: relative;
+	float: left;
+	margin-right: 10px;
+}
+.slider-control a .text {
+	display: none;
+	height: 70px;
+	width: 70px;
+	background-color: #fff;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+}
+.slider-control a:hover .text {
+	display: block;
+}
+
+.paginator {
+	width: 100%;
+    float: left;
+    padding-left: 15px;
 }
