@@ -1,0 +1,14 @@
+<div class="nav_list">
+    <a href="{% url 'admin_staff:categories' %}" class="nav_link {% if request.resolver_match.url_name == 'products' %}
+                active
+           {% endif %}">
+        <i class='bx bx-grid-alt nav_icon'></i>
+        <span class="nav_name">Категории</span>
+    </a>
+    <a href="{% url 'admin_staff:users' %}" class="{% if request.resolver_match.url_name == 'users' %}
+                active
+           {% endif %} nav_link">
+        <i class='bx bx-user nav_icon'></i>
+        <span class="nav_name">Пользователи</span>
+    </a>
+</div>

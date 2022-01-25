@@ -1,0 +1,72 @@
+.red {
+	text-transform: uppercase;
+	color: #e53935;
+	font-size: 18px;
+	font-weight: 700;
+	text-align: left;
+	letter-spacing: 1px;
+	line-height: 17px;
+	margin-bottom: 22px;
+}
+
+.related-products, .category-products {
+	display: inline-block;
+}
+
+.products .block a img {
+	float: left;
+}
+.products .block {
+	float: left;
+	margin: 15px;
+	display: block;
+	height: 370px;
+	width: 370px;
+	position: relative;
+}
+
+.details-products {
+	padding-left: 98px;
+	padding-right: 98px;
+	margin-top: 98px;
+	height: 651px;
+}
+.details-slider {
+	width: 470px;
+	float: left;
+	margin-right: 30px;
+}
+.slider-product {
+	width: 570px;
+	height: 570px;
+}
+.slider-control {
+	width: 420px;
+	height: 70px;
+	padding-left: 100px
+}
+.slider-control .block {
+	height: 70px;
+	width: 70px;
+	position: relative;
+	float: left;
+	margin-right: 10px;
+}
+.slider-control a .text {
+	display: none;
+	height: 70px;
+	width: 70px;
+	background-color: #fff;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+}
+.slider-control a:hover .text {
+	display: block;
+}
+
+.paginator {
+	width: 100%;
+    float: left;
+    padding-left: 15px;
+}

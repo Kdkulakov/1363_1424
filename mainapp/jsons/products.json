@@ -1,0 +1,48 @@
+[
+  {
+      "category": 1,
+      "name": "Лампа сфера",
+      "image": "products_images/product-1.jpg",
+      "short_desc": "Уникальный дизайн",
+      "description": "Супер сфера",
+      "price": "3500.00",
+      "quantity": 10
+  },
+  {
+
+      "category": 1,
+      "name": "Стул фамильный",
+      "image": "products_images/product-4.jpg",
+      "short_desc": "Очень интересный стул",
+      "description": "",
+      "price": "4590.00",
+      "quantity": 2
+  },
+  {
+      "category": 3,
+      "name": "Классический диван",
+      "image": "products_images/product-3-sm.jpg",
+      "short_desc": "Уникальный дизайн",
+      "description": "ыва",
+      "price": "45000.00",
+      "quantity": 5
+  },
+  {
+      "category": 4,
+      "name": "Стулья",
+      "image": "products_images/product-2.jpg",
+      "short_desc": "Удобный стул для всех",
+      "description": "",
+      "price": "14500.00",
+      "quantity": 10
+  },
+  {
+      "category": 3,
+      "name": "Чайник",
+      "image": "products_images/product-3.jpg",
+      "short_desc": "Уникальный дизайн",
+      "description": "",
+      "price": "1500.00",
+      "quantity": 10
+  }
+]

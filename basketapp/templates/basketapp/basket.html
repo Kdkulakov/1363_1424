@@ -1,0 +1,31 @@
+{% extends 'geekshop/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+{% endblock %}
+
+{% block js %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="{% static 'basketapp/js/basket_scripts.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+    <div class="header clearfix">
+        {% include 'geekshop/includes/main_menu.html' %}
+        <a href="#" class="basket"></a>
+    </div>
+    <div class="h2 text-center head">
+      Ваша корзина,
+      {% if user.first_name %}
+        {{ user.first_name|title}}
+      {% else %}
+        Пользователь
+      {% endif %}
+    </div>
+
+    {% include 'basketapp/includes/inc_basket_list.html' %}
+
+
+{% endblock %}

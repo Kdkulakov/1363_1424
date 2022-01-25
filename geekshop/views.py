@@ -1,9 +1,23 @@
 from django.shortcuts import render
 
+from basketapp.models import Basket
+from mainapp.models import Product
+
 
 def index(request):
-    return render(request, 'geekshop/index.html')
+    title = 'GeekShop'
+    products = Product.objects.all()[:4]
+
+    context = {
+        'title': title,
+        'products': products,
+    }
+    return render(request, 'geekshop/index.html', context)
 
 
 def contacts(request):
-    return render(request, 'geekshop/contacts.html')
+    title = 'контакты'
+    context = {
+        'title': title,
+    }
+    return render(request, 'geekshop/contacts.html', context)

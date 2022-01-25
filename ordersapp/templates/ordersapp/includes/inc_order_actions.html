@@ -1,0 +1,24 @@
+{% if object.status == 'FM' %}
+<div class="container">
+    <div class="d-flex justify-content-around">
+       <button class="btn btn-warning btn-round form-control w-25 my-2 last">
+           <a href="{% url 'orders:order_forming_complete' object.pk %}">
+               совершить покупку
+           </a>
+       </button>
+       <button class="btn btn-warning btn-round form-control w-25 my-2 last">
+           <a href="{% url 'orders:order_delete' object.pk %}">удалить</a>
+       </button>
+    </div>
+</div>
+{% endif %}
+<div class="container">
+    <button class="btn btn-info btn-round form-control my-2 last">
+       <a href="{% url 'orders:orders_list' %}">
+           к списку заказов
+       </a>
+    </button>
+    <button class="btn btn-light btn-round form-control  my-2 last">
+       <a href="{% url 'index' %}">на главную</a>
+    </button>
+</div>
